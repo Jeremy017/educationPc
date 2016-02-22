@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="keywords" content="沃赛 沃赛仿真 沃赛仿真教育">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="shortcut icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<title>杭州沃赛科技有限公司</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/experiment.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/lightslider.min.css">
+
+<script type="text/javascript">
+	new WOW().init();
+
+	var browser = {
+     versions:function(){
+     var u = navigator.userAgent, app = navigator.appVersion;
+     return {//移动终端浏览器版本信息
+          trident: u.indexOf("Trident") > -1, //IE内核
+          presto: u.indexOf("Presto") > -1, //opera内核
+          webKit: u.indexOf("AppleWebKit") > -1, //苹果、谷歌内核
+          gecko: u.indexOf("Gecko") > -1 && u.indexOf("KHTML") == -1, //火狐内核
+          mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+          ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+          android: u.indexOf("Android") > -1 || u.indexOf("Linux") > -1, //android终端或者uc浏览器
+          iPhone: u.indexOf("iPhone") > -1 , //是否为iPhone或者QQHD浏览器
+          iPad: u.indexOf("iPad") > -1, //是否iPad
+          webApp: u.indexOf("Safari") == -1 //是否web应该程序，没有头部与底部
+          };
+     }(),
+     language:(navigator.browserLanguage || navigator.language).toLowerCase()
+	}
+	console.log(navigator.userAgent);
+</script>
+<script type="text/javascript">
+$(function(){
+
+	footerCodeShow();
+
+	$('#image-gallery').lightSlider({
+//      gallery:true,
+		pager: true,	
+	     item:1,
+	     thumbItem:9,
+	     slideMargin: 0,
+	     speed:500,
+		auto:true,
+	     loop:true,
+	     onSliderLoad: function() {
+			$('#image-gallery').removeClass('cS-hidden');
+    	 }  
+ 	});
+	
+});
+</script>
+<style type="text/css">
+.page-header{
+	padding-left: 15px;
+	border: 0;
+	margin: 20px 0 0px;
+}
+.page-header h1{
+	font-size: 24px;
+	color: #d73329;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="download">
+			<div class="container">
+				<ul class="pull-right">
+					<li><a href="http://www.wosaitech.com/teach_pc/index/home">赛学霸大厅</a></li>
+					<li><a href="download.html">大厅下载</a></li>
+					<li><a href="http://www.wosaitech.com/teach_pc_zc/index/home">中策仿真入口</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 导航 -->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand col-xs-8" href="index.html"><img src="images/logo.png" class="logo"></a>
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<div class="navbar-header navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">仿真介绍</a></li>
+							<li><a href="allExperiment.html">所有实验</a></li>
+							<li><a href="businessCooperation.html">商业合作</a></li>
+							<li><a href="briefIntro.html">公司介绍</a></li>
+							<li><a href="support.html">服务支持</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav><!-- 导航 -->
+
+	    <div class="swiper-container">
+	    	<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+             <li data-thumb="images/01.jpg"> 
+           		<img src="images/01.jpg">
+           	</li>
+           	 <li data-thumb="images/02.jpg"> 
+           		<img src="images/02.jpg">
+           	</li>
+           	 <li data-thumb="images/03.jpg"> 
+           		<img src="images/03.jpg">
+           	</li>
+           	 <li data-thumb="images/04.jpg"> 
+           		<img src="images/04.jpg">
+           	</li>
+        </ul>
+	    </div>
+
+		<div class="container introduction">
+			<div class="mainContent">
+				<div class="titleContent">
+					<h1 class="title">什么是沃赛仿真</h1>
+					<p>沃赛仿真就是利用移动互联网手机应用和平板应用，包容传统PC应用的跨平台技术，结合云计算，云存储，图形图像等多种计算机技术来模拟仪器设备，实验等真实教学内容等，学生模拟扮演某一角色进行技能训练的一种教学方法。仿真教育能在很大程度上弥补客观条件的不足，为学生提供近似真实的训练环境，提高学生职业技能。沃赛仿真充分吸收互联网思维和年轻人元素，让仿真趣味化，游戏化，实现寓教于乐的互联网+教育。并融合预习、讲课、测验、评估于一体，实现围绕仿真教育的在线课堂教学平台，充分满足现代教育需求。</p>
+				</div>
+
+				<div class="introImg">
+					<div class="introImageArea">
+						
+					</div>
+				</div>
+
+				<div class="mainAdvance">
+					<div class="advance wow zoomIn">
+						<h1 class="title">为学生提供了充分动手的机会</h1>
+                  	  	<p class="p">强大的交互性能，使得学生们可以自己动手设置各种实验参数，并及时地得到结果，这在真实世界中往往是无法实现的。</p>
+               		</div>
+					<div class="advance advance-r wow zoomIn">
+						<h1 class="title">灵活的仿真各种真实情况</h1>
+                  	  	<p class="p">在仿真软件中可以灵活地设置各种参数、模拟条件，就可以自如地模拟真实世界中的各种情况。</p>
+               		</div>
+               		<div class="advance wow zoomIn">
+						<h1 class="title">调动学生的学习主动性</h1>
+                  	  	<p class="p">仿真软件一般都是独立操作，独立完成，学生必须开动脑筋认真分析问题，从而才能准确地解决问题。传统的教学中，学生往往会等待教师给出正确答案。</p>
+               		</div>
+               		<div class="advance advance-r wow zoomIn">
+						<h1 class="title">减轻教师的负担</h1>
+                  	  	<p class="p">学生们主观能动性的提高，就意味着教师可以腾出手来做更多的教学工作，或进行有针对性的指导工作。传统教学中，一个教师往往要面对几十位学生，无法跟踪每个学生的全过程。</p>
+               		</div>
+               		<div class="advance wow zoomIn">
+						<h1 class="title">自动评价功能</h1>
+                  	  	<p class="p">一般情况下，仿真软件具有评价功能，可以给学生的每一次操作实时地评分，使学生们可以即时地了解自己的每一次操作的正确性或合理性。</p>
+               		</div>
+               		<div class="advance advance-r wow zoomIn">
+						<h1 class="title">开拓想象空间</h1>
+                  	  	<p class="p">仿真软件的操作不存在限制，学生可以海阔天空地想象，进行各种各样的设计，并迅速地通过仿真看到结果。这在传统教学中是不可能实现的。</p>
+               		</div>
+				</div>
+			</div>	
+		</div>
+		
+			
+		<div class="push"></div>
+	</div>
+
+	<!-- 版权导航 -->
+	<div class="footer">
+		<div class="container">
+			<div class="copyright">
+				Copyright © 2014-2015 杭州沃赛科技有限公司 All Rights Reserved. <a href="http://www.miitbeian.gov.cn">浙ICP备15001708号</a>
+			</div>
+
+			<div class="share">
+				<a href="#" class="weixin">
+					
+				</a>
+
+				<div class="qcode">
+					<div class="triangle">
+					
+					</div>
+				</div>
+				<a href="http://weibo.com/u/5645494721" class="weibo" target="_blank"></a>
+				<a href="tencent://message/?uin=10473222&Site=www.wosaitech.com&Menu=yes" class="qq"></a>
+			</div>
+		</div>
+	</div><!-- 版权导航 -->
+
+	<script type="text/javascript" src="js/lightslider.min.js"></script>
+</body>
+</html>

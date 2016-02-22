@@ -1,0 +1,62 @@
+.support{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background:#fff;
+    padding-left: 0;
+    padding-right: 0;
+}
+.support .jumbotron{
+	background: url(../images/contact/contact.png) no-repeat right 8px;
+	-webkit-box-shadow: 1px solid rgba(0,0,0,0.6);
+	-moz-box-shadow: 1px solid rgba(0,0,0,0.6);
+	-o-box-shadow: 1px solid rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+}
+.suppor_main{
+    /* width: 960px; */
+    height: 316px;
+    padding: 40px 60px;
+    position: relative;
+}
+.suppor_main h3{
+	color: #333333;
+}
+.suppor_main p{
+	color: #666666;
+	margin-top: 15px;
+	font-size: 16px;
+}
+a.contactUs{
+    background-color: #ff8100;
+    display: inline-block;
+    width: 114px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 75px;
+    text-decoration: none;
+}
+a.contactUs:link{
+    color: #fff;
+}
+a.contactUs:visited{
+    color: #fff;
+}
+a.contactUs:hover{
+    color: #fff;
+}
+a.contactUs:active{
+    color: #fff;
+}
+.contactImg{
+	width: 297px;
+	height: 236px;
+	position: absolute;
+	background: url(../images/contact/contact.png) no-repeat;
+	top: 40px;
+	right: 80px;
+}

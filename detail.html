@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="keywords" content="沃赛 沃赛仿真 沃赛仿真教育">
+	<link rel="shortcut icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<title>实验详情</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/experiment.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/detail.css">
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+<script type="text/javascript">
+$(function(){
+
+	footerCodeShow();
+
+	var experimentType;
+	var experiment;
+	var experimentName;
+	 
+	// 调用方法
+	var id = GetQueryString("experimentId");
+	var type = GetQueryString("type");
+
+	if(type==1){
+		experimentType = experimentData.basicExperiment;
+		experiment = experimentData.basicExperiment[id-1];
+	}else if(type=2){
+		experimentType = experimentData.commonExperiment;
+		experiment = experimentData.commonExperiment[id-1];
+	}
+	experimentName = experiment.name;
+
+	$(".itembox01 h1").html(experimentName);
+	$(".itembox01 p").html(experiment.goal[0]);
+	$(".shortdecription").html(experiment.introduction);
+
+	var tempDetail = '<li class="clearfix open">' +
+						'<div class="openicon"></div>' +
+
+						'<div class="outline_list l">' +
+						'<!-- <em class="outline_zt"></em> -->' +
+							'<h5 class="outline_name">{detail}</h5>' +
+						'</div>' +
+				'</li>';
+
+	var tempOthers = '<dd class="clearfix course-list-relation">' +
+			        '<a href="#" class="cover" data-id="{id}"><img src="{img}" width="220" height="167" border="0" class="smallCover">' +
+			      '</dd>';
+
+	for(var i=0;i<experiment.goal.length;i++){
+		$(".goalList").append(tempDetail.replace("{detail}",experiment.goal[i]));
+	}
+
+	for(var i=0;i<experimentType.length;i++){
+
+		if((id-1) == i){
+			continue;
+		}
+		$(".course-relation").append(tempOthers.replace("{id}",experimentType[i].id).replace("{img}",experimentType[i].smallImg)
+			.replace("{name}",experimentType[i].name));
+	}
+
+	$(".cover").click(function(){
+		var id = $(this).attr("data-id");
+		window.location.href="detail.html?experimentId="+id+"&type="+type;
+	});
+
+});
+</script>
+<style type="text/css">
+.page-header{
+	padding-left: 15px;
+	border: 0;
+	margin: 20px 0 0px;
+}
+.page-header h1{
+	font-size: 24px;
+	color: #d73329;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="download">
+			<div class="container">
+				<ul class="pull-right">
+					<li><a href="http://www.wosaitech.com/teach_pc/index/home">赛学霸大厅</a></li>
+					<li><a href="download.html">大厅下载</a></li>
+					<li><a href="http://www.wosaitech.com/teach_pc_zc/index/home">中策仿真入口</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 导航 -->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand col-xs-8" href="index.html"><img src="images/logo.png" class="logo"></a>
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<div class="navbar-header navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">仿真介绍</a></li>
+							<li class="active"><a href="allExperiment.html">所有实验</a></li>
+							<li><a href="businessCooperation.html">商业合作</a></li>
+							<li><a href="briefIntro.html">公司介绍</a></li>
+							<li><a href="support.html">服务支持</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav><!-- 导航 -->
+
+		<div class="container experiment_info">
+			<div class="itembox01">
+		        <h1></h1>
+		        <p></p>
+		        <!-- <div class="navlink" id="general">点击试玩 &gt;</div> -->
+
+		        <div class="tricks">
+		        	
+		        </div>
+	        </div>
+		</div>
+
+		<div class="container experimentList">
+			<div class="experimentLeft">
+				<h3>实验介绍</h3>
+
+				<div class="shortdecription">
+					
+				</div>
+
+				<h3 class="todo">实验目的</h3>
+
+				<ul class="goalList">
+					<!-- <li class="clearfix open">
+						<a href="/learn/415">
+							<div class="openicon"></div>
+					
+							<div class="outline_list l">
+							<em class="outline_zt"></em>
+								<h5 class="outline_name">第1章 概述</h5>
+								<p class="outline_descr">本章首先介绍了课程的学习内容和观察者的概念，然后介绍了一个应用观察者模式的场景，该场景将作为案例贯穿整个课程。</p>
+							</div>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+
+			<div class="experimentRight">
+				<dl class="course-relation">
+			      <dt>相关实验</dt>
+		          
+
+		          <!-- <dd class="clearfix course-list-relation">
+		          			        <a href="/view/149?src=sugc" class="cover"><img src="http://img.mukewang.com/53bbb59f0001475806000338.jpg" width="108" height="60" border="0">
+		          			        <span class="othername">Swift Weather APP</span></a>
+		          			      </dd>
+		          
+		          			      <dd class="clearfix course-list-relation">
+		          			        <a href="/view/395?src=sugc" class="cover"><img src="http://img.mukewang.com/55594b500001c51406000338.jpg" width="108" height="60" border="0">
+		          			        <span class="othername">iOS-动画进阶</span></a>
+		          			      </dd>
+		          
+		          <dd class="clearfix course-list-relation">
+		          			        <a href="/view/392?src=sugc" class="cover"><img src="http://img.mukewang.com/555053df0001b54e06000338.jpg" width="108" height="60" border="0">
+		          			        <span class="othername">iOS-动画入门</span></a>
+		          			      </dd>
+		          
+		          <dd class="clearfix course-list-relation">
+		          			        <a href="/view/149?src=sugc" class="cover"><img src="http://img.mukewang.com/53bbb59f0001475806000338.jpg" width="108" height="60" border="0">
+		          			        <span class="othername">Swift Weather APP</span></a>
+		          			      </dd> -->
+			    </dl>
+			</div>
+		</div>
+
+		<div class="push"></div>
+	</div>
+
+	<!-- 版权导航 -->
+	<div class="footer">
+		<div class="container">
+			<div class="copyright">
+				Copyright © 2014-2015 杭州沃赛科技有限公司 All Rights Reserved. <a href="http://www.miitbeian.gov.cn">浙ICP备15001708号</a>
+			</div>
+
+			<div class="share">
+				<a href="#" class="weixin">
+					
+				</a>
+
+				<div class="qcode">
+					<div class="triangle">
+					
+					</div>
+				</div>
+				<a href="http://weibo.com/u/5645494721" class="weibo" target="_blank"></a>
+				<a href="tencent://message/?uin=10473222&Site=www.wosaitech.com&Menu=yes" class="qq"></a>
+			</div>
+		</div>
+	</div><!-- 版权导航 -->
+
+	<!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>
+</body>
+</html>

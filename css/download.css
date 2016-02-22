@@ -1,0 +1,159 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	background: url(../images/download/bg.jpg) no-repeat center center #5d3920;
+	background-size: cover;
+	height: 100%;
+}
+body{
+	
+}
+a {
+	text-decoration: none;
+	color: #1a1a1a;
+}
+.container{
+	height: 520px;
+	top: 50%;
+	position: absolute;
+	width: 920px;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	/* background: rgba(255,0,0,0.6); */
+}
+div.container .btns {
+	position: absolute;
+	top: 360px;
+	left: 0;
+	white-space: nowrap;
+	z-index: 100;
+}
+div.container .btns a.iosbtn {
+	background-image: url("../images/download/ios.png");
+}
+div.container .btns a.androidbtn {
+	background-image: url("../images/download/android.png");
+}
+div.container .btns a.iosbtn:hover {
+	background-image: url("../images/download/ios.png");
+	background-position: 0 -54px;
+}
+div.container .btns a.iosbtn:hover .qcodeIos{
+	opacity: 1;
+	display: block;
+}
+div.container .btns a.androidbtn:hover {
+	background-image: url("../images/download/android.png");
+	background-position: 0 -54px;
+}
+div.container .btns a.androidbtn:hover .qcodeAndroid{
+	opacity: 1;
+	display: block;
+}
+.qcodeAndroid,.qcodeIos{
+	width: 120px;
+	height: 120px;
+	background: #fff;
+	position: absolute;
+	bottom: 74px;
+	left: 58px;
+	background-image: url("../images/download/androidCode.png");
+	opacity: 0;
+	display: none;
+}
+.qcodeIos{
+	background-image: url("../images/download/iosCode.png");
+}
+.triangle{
+	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+	border-top: 12px solid #fff;
+	width: 0;
+	height: 0;
+	bottom: -12px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	position: absolute;
+}
+div.container .btns a {
+	display: inline-block;
+	width: 232px;
+	height: 54px;
+	margin-right: 30px;
+	background: no-repeat;
+	position: relative;
+	/* background-color: #fff; */
+}
+div.container .text {
+	width: 419px;
+ 	height: 201px;
+	background: url("../images/download/text.png") no-repeat;
+	position: absolute;
+	top: 130px;
+	left: 0;
+}
+div.container .logo {
+	width: 220px;
+	height: 61px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: url("../images/download/logo.png") no-repeat;
+}
+div.container .phone {
+	background: url("../images/download/phones.png") no-repeat;
+	width: 395px;
+	height: 504px;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	-webkit-animation: phone 2s;
+	-moz-animation: phone 2s;
+	-o-animation: phone 2s;
+	animation: phone 2s;
+}
+@-webkit-keyframes phone {
+    0% {
+        -webkit-filter: blur(30px);
+        filter: blur(30px);
+        opacity: 0;
+        -webkit-transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-30px,0)
+    }
+
+    100% {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes phone {
+    0% {
+        -webkit-filter: blur(30px);
+        filter: blur(30px);
+        opacity: 0;
+        -webkit-transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-30px,0)
+    }
+
+    100% {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}

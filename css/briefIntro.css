@@ -1,0 +1,41 @@
+h3{
+	font-size: 18px;
+	font-weight: bold;
+}
+.aboutUs{
+	/* background-color: #f2f2f2; */
+	margin-top: 30px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 30px;
+}
+.main-area{
+	padding: 15px;
+}
+.title{
+	border-bottom: 1px solid #dadada;
+	padding-bottom: 15px;
+}
+.title h3{	
+	margin: 0 auto;
+	/* p; */
+}
+.main-intro{
+	margin-top: 20px;
+}
+.ourImg{
+	float: left;
+	width: 340px;
+	background: url(../images/us2.jpg) no-repeat;
+	height: 350px;
+}
+.main-content{
+	float: left;
+	width: 590px;
+	margin-left: 40px;
+}
+.main-content p{
+	text-indent: 2em;
+	line-height: 24px;
+	text-align: justify;
+}

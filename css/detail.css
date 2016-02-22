@@ -1,0 +1,200 @@
+.experiment_info {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 20px;
+  height: 400px;
+  background:url(../images/experimentBanner.png);
+  position: relative;
+}
+.tricks{
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  background: url(../images/tricks.png);
+  width: 138px;
+  height: 102px;
+}
+.itembox01 {
+  width: 340px;
+  top: 50px;
+  right: 74px;
+  position: absolute;
+}
+.itembox01 h1{
+  width: 240px;
+  /* margin: 0 auto; */
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 28px;
+  color: #FFF;
+}
+.itembox01 p{
+  font-size: 16px;
+  color: #FFF;
+  line-height: 18px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.navlink {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: #ffb534;
+  cursor: pointer;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  -o-transition:all 0.3s;
+  transition:all 0.3s;
+  font-weight: bold;
+}
+.navlink:hover{
+  background: #FBA40C;
+}
+.experimentList {
+  margin: 20px auto 30px;
+  padding: 0;
+  height: auto;
+}
+.experimentList .experimentLeft {
+  width: 710px;
+  float: left;
+  margin-right: 20px;
+  padding: 40px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+.experimentList .experimentLeft h3 {
+  color: #303538;
+  font-size: 18px;
+  line-height: 40px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.experimentList .experimentLeft h3.todo{
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.experimentList .experimentLeft .shortdecription {
+  color: #60686b;
+  font-size: 14px;
+  line-height: 30px;
+  word-break: break-all;
+  white-space: normal;
+  text-align: justify;
+}
+.experimentList .experimentLeft ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  z-index: 2;
+  vertical-align: middle;
+}
+/* .experimentList .experimentLeft ul li:hover .openicon{
+    background: url(../images/listBtn.png) no-repeat 0 -42px;
+}
+.experimentList .experimentLeft ul li:hover .outline_list h5{
+    color: #be3948;
+} */
+.experimentList .experimentLeft ul li .openicon {
+  float: left;
+  width: 41px;
+  height: 41px;
+  display: block;
+  margin: 5px 0 0;
+  background: url(../images/listBtn.png) no-repeat 0  0;
+  width: 30px;
+  height: 30px;
+}
+.experimentList .experimentLeft ul li .outline_list {
+  position: relative;
+  margin-left: 10px;
+  padding: 5px 0;
+  width: 580px;
+  float: left;
+}
+.experimentList .experimentLeft ul li .outline_list h5 {
+  color: #60686b;
+  font-size: 14px;
+  font-weight: bold;
+}
+.experimentList .experimentLeft ul li .outline_list p {
+  color: #60686b;
+  font-size: 12px;
+  line-height: 24px;
+}
+.experimentList .experimentRight {
+  width: 270px;
+  float: left;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+.experimentRight dl{
+  /* clear: both; */
+  padding: 0 25px 1px;
+  /* background: #fff; */
+  margin-bottom: 20px;
+  /* -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  -o-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+.experimentRight dl dt {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #e3e6e8;
+}
+.experimentRight dl dd {
+  color: #656e73;
+  font-size: 12px;
+  line-height: 2em;
+  word-break: break-all;
+  white-space: normal;
+  margin: 20px 0;
+}
+.cover {
+  display: block;
+  height: 167px;
+  overflow: hidden;
+}
+/* .smallCover{
+  -webkit-transition:all 0.3s;
+  transition:all 0.3s;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.smallCover:hover{
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+} */
+.othername {
+  float: right;
+  width: 122px;
+  font-size: 12px;
+  color: #60686b;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding-left: 10px;
+}
+  
+
+/*# sourceMappingURL=detail.css.map */

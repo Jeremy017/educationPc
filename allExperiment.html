@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="keywords" content="沃赛 沃赛仿真 沃赛仿真教育">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="shortcut icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://www.wosaitech.com/favicon.png" type="image/x-icon">
+	<title>所有实验</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/experiment.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/allExperiment.css">
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+<script type="text/javascript">
+$(function(){
+
+	footerCodeShow();
+
+	for(var i=0;i<3;i++){
+		var basicExperiment = experimentData.basicExperiment[i];
+		$(".basicList").append(basicTemp.replace("{id}",basicExperiment.id).replace("{ii}",i+2).replace("{name}",basicExperiment.name));
+		$(".basicBox"+(i+2)).css("background","url("+basicExperiment.coverImg+")");
+
+		var commonExperiment = experimentData.commonExperiment[i];
+		$(".commonList").append(commonTemp.replace("{id}",commonExperiment.id).replace("{ii}",i+2).replace("{name}",commonExperiment.name));
+		$(".commonBox"+(i+2)).css("background","url("+commonExperiment.coverImg+")");
+	}
+
+	$(".basicList").append("<div class='more' data-type='1'>More</div>");
+	$(".commonList").append("<div class='more' data-type='2'>More</div>");
+
+	$(".detail").click(function(){
+		var id = $(this).attr("data-id");
+		var type = $(this).attr("data-type");
+		window.location.href="detail.html?experimentId="+id+"&type="+type;
+	});
+
+	$(".more").click(function(){
+		var type = $(this).attr("data-type");
+		window.location.href="allExperementShow.html?type="+type;
+	});
+
+});
+</script>
+<style type="text/css">
+.page-header{
+	padding-left: 15px;
+	border: 0;
+	margin: 20px 0 0px;
+}
+.page-header h1{
+	font-size: 24px;
+	color: #d73329;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="download">
+			<div class="container">
+				<ul class="pull-right">
+					<li><a href="http://www.wosaitech.com/teach_pc/index/home">赛学霸大厅</a></li>
+					<li><a href="download.html">大厅下载</a></li>
+					<li><a href="http://www.wosaitech.com/teach_pc_zc/index/home">中策仿真入口</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 导航 -->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand col-xs-8" href="index.html"><img src="images/logo.png" class="logo"></a>
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<div class="navbar-header navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">仿真介绍</a></li>
+							<li class="active"><a href="allExperiment.html">所有实验</a></li>
+							<li><a href="businessCooperation.html">商业合作</a></li>
+							<li><a href="briefIntro.html">公司介绍</a></li>
+							<li><a href="support.html">服务支持</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav><!-- 导航 -->
+
+		<!-- banner -->
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+					<img src="images/01.jpg" alt="">
+	             </div>
+
+	             <div class="swiper-slide">
+					<img src="images/02.jpg" alt="">
+	             </div>
+
+	             <div class="swiper-slide">
+					<img src="images/03.jpg" alt="">
+	             </div>
+
+	             <div class="swiper-slide">
+					<img src="images/04.jpg" alt="">
+	             </div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+
+	        <!-- Add Arrows -->
+	        <div class="swiper-button-next swiper-button-white"></div>
+	        <div class="swiper-button-prev swiper-button-white"></div>
+	    </div><!-- banner -->
+
+		<!-- 套餐区域 -->
+		<div class="container entry">
+			<div class="basicList">
+				<div class="basicBox basicBox1">
+					
+				</div>
+			</div>
+
+			<div class="commonList">
+				<div class="commonBox commonBox1">
+					
+				</div>
+			</div>
+		</div>
+			
+		<div class="push"></div>
+	</div>
+
+	<!-- 版权导航 -->
+	<div class="footer">
+		<div class="container">
+			<div class="copyright">
+				Copyright © 2014-2015 杭州沃赛科技有限公司 All Rights Reserved. <a href="http://www.miitbeian.gov.cn">浙ICP备15001708号</a>
+			</div>
+
+			<div class="share">
+				<a href="#" class="weixin">
+					
+				</a>
+
+				<div class="qcode">
+					<div class="triangle">
+					
+					</div>
+				</div>
+				<a href="http://weibo.com/u/5645494721" class="weibo" target="_blank"></a>
+				<a href="tencent://message/?uin=10473222&Site=www.wosaitech.com&Menu=yes" class="qq"></a>
+			</div>
+		</div>
+	</div><!-- 版权导航 -->
+
+	<!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+    </script>
+</body>
+</html>
+

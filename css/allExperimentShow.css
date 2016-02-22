@@ -1,0 +1,67 @@
+.entry {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.commonList,.basicList {
+  width: 946px;
+  /* height: 338px; */
+  margin: 0 auto 30px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 1px;
+}
+.commonBox,.basicBox{
+  width: 220px;
+  height: 308px;
+  margin-left: 0;
+  float: left;
+  background: url(../images/experiment/commonExperiment.png);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.basicList>.basicBox:nth-child(1),.basicList a:nth-child(4n+1) .basicBox{
+  margin-left: 0px;
+}
+.commonList>.commonBox:nth-child(1),.commonList a:nth-child(4n+1) .commonBox{
+  margin-left: 0px;
+}
+.basicBox{
+    background: url(../images/experiment/basicExperiment.png);
+}
+.font{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 308px;
+    z-index: 9;
+    /* border-radius: 0; */
+}
+.basicBox:hover,.commonBox:hover{
+  cursor: pointer;
+}
+.basicBox1:hover,.commonBox1:hover{
+  cursor: default;
+}
+.more{
+    clear: both;
+  
+    /* color: #000; */
+    /* margin-top: 20px; */
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.title{
+  padding-left: 27px;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}

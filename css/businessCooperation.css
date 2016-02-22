@@ -1,0 +1,68 @@
+h3{
+	font-size: 18px;
+	font-weight: bold;
+}
+.aboutUs{
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 30px;
+}
+.main-rule{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.main-rule li{
+	line-height: 24px;
+}
+.contactUs{
+	margin-top: 30px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 30px;
+}
+.main-contact {
+	padding: 15px;
+}
+.title{
+	border-bottom: 1px solid #dadada;
+	padding-bottom: 15px;
+}
+.main-contact h3{	
+	margin: 0 auto;
+	/* p; */
+}	
+.main{
+	margin-top: 20px;
+}
+.map{
+	width: 600px;
+	height: 300px;
+	float: left;
+	background: url(../images/map.jpg) no-repeat;
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-o-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.contact{
+	width: 340px;
+	height: 300px;
+	float: left;
+	margin-left: 30px;
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-o-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.lianxi-main{
+	padding: 10px;
+}
+.add-title{
+	padding-bottom:10px;
+}
+.lianxibox{
+	margin-bottom: 20px;
+}
+
